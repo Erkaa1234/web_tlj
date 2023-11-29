@@ -1,0 +1,4 @@
+git status --> shalgana uurchlugduugu bol ulaan uurchlugsun bol ngoon
+git add . --.=> uurchlultuu batalgaajuulna (batalgaajuulsnii daraa ngooon bolno)
+git commit -m "asdf" --> uurihuu repo ruu oruulna 
+git push origin master --> github page ruugee pushlen 

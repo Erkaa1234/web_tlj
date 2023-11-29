@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOUS LES JOURS - HOME</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+
+* {
+    font-family: 'PT Serif', serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+:root {
+    --bg-color: #186049;
+    --text-color: #fefefe;
+    
+    --pro-color: #AD8558;
+    --protext-color: #eddfca;
+
+    --ft-color: #0a291f;
+    --noti-color: #red;
+}
+
+a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    background-color: var(--bg-color);
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 5%;
+    transition: all .50s ease;
+}
+
+.navbar{
+    display: flex;
+}
+
+.navbar a{
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 300;
+    padding: 5px 0;
+    margin: 0 30px;
+    transition: all .50s ease;
+}
+
+.main {
+    display: flex;
+    align-items: center;
+}
+
+.main a {
+    color: var(--text-color);
+    font-size: 1.2rem;
+    font-weight: 300;
+    transition: all .50s ease;
+    padding: 0 0 0 15px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+}
+
+.location img{
+    margin-right: 10px;
+}
+
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 10001;
+    display: none;
+}
+
+
+
+
+
+        /*footer*/
+        footer{
+    margin-top: 40px;
+    background-color:var(--ft-color);
+    color: white;
+    overflow: auto;
+}
+footer hr{
+    width: 94%;
+    margin: auto;
+}
+.social_address{
+    display: flex;
+}
+#social_feedback{
+    width: 50%;
+    display: flex;
+    margin: auto;
+}
+#socials{
+    display: flex;
+}
+#social_feedback{
+    width: 50%;
+    display: flex;
+    margin: auto;
+}
+#socials{
+    display: flex;
+}
+#socials li{
+    margin-left: 30px;
+    margin: 20px 30px;
+    padding-top: 12px;
+    position: relative;
+}
+#socials li a:hover{
+    padding-top: 12px;
+    color: var(--pro-color);
+}
+#socials li a:hover:after{
+    width: 100%;
+}
+#socials li a svg{
+    width: 32px;
+    height: 32px;
+}
+#feedback {
+    margin: auto;
+}
+#feedback {
+    position: relative;
+    letter-spacing: o.5px;
+}
+#feedback a:hover{
+    color:var(--pro-color);
+}
+a:after{
+    content: "";
+    background-color: var(--pro-color);
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -12px;
+    transition: 0.3s;
+}
+#feedback a:hover::after{
+    width: 100%;
+}
+#socials li a svg{
+    width: 32px;
+    height: 32px;
+}
+#feedback {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+#feedback a{
+    margin: 0px 35px;
+    position: relative;
+}
+.address{
+    display: flex;
+}
+.address #adds{
+    width: 50%;
+    margin: 30px 70px;
+}
+#adds ul li{
+    padding-top: 12px;
+
+}
+#adds ul li:hover{
+    padding-top: 12px;
+    color: #AD8558;
+}
+
+.bla li{
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: start;  
+}
+.bla li p {
+    padding-left: 5px ;
+}
+
+.address p{
+    font-size: 14px;
+    margin: auto;
+}
+#text{
+    margin-right: 70px;
+}
+.icons{
+    display: flex;
+}
+
+
+
+        @media (max-width: 740px) {
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 960px) {
+    header{
+        padding: 14px 2%;
+        transition: .2s;
+    }
+    .navbar a{
+        padding: 5px 0;
+        margin: 0px 20px;
+    }
+}
+
+@media (max-width: 1090px) {
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 270px;
+        height: 20vh;
+        background: var(--bg-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        border-radius: 10px;
+        transition: all .50s ease;
+    }
+    .navbar a{
+        display: block;
+        margin: 12px 0;
+        padding: 0px 25px;
+        transition: all .50s ease;
+    }
+    .navbar a:hover{
+        background-color: #0a291f;
+    }
+    .navbar a.active{
+        color: var(--ft-color);
+    }
+    .navbar.open{
+        right: 2%;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <a href="homee.html" ><figure><img id="logo_pic" src="web_pic/logo4.png" alt="tous_les_jours_logo" width="230" height="30"></figure></a>
+
+        <section>
+            <ul class="navbar">
+                <li><a href="taniltsuulga.html">Танилцуулга</a></li>
+                <li><a href="buteegdhuun.html">Бүтээгдэхүүн</a></li>
+                <li><a href="medee.html">Мэдээ</a></li>
+            </ul>  
+        </section>
+          
+
+        <section class="main">
+            <!-- <i class='bx bxs-shopping-bag'></i> -->
+            <img id="cart_icon" src="web_pic/icon_cart.png" alt="cart" width="31" height="30">
+
+            <a href="salbar.html" class="location"><img src="web_pic/icon_location.png" alt="location" width="20" height="31">Салбар</a>
+
+            <article class="bx bx-menu" id="menu-icon"> </article>
+        </section>
+
+        <!-- <div id="cart">
+            
+        </div> -->
+    </header>
+        
+        <footer>
+        <section class="social_address">
+            <address id="social_feedback">
+            <ul id="socials">
+                <li><a href="https://www.facebook.com/TousLesJoursMongolia"><figure><img src="web_pic/logo_fb.png" alt="facebook" width="30" height="30"></figure></a></li>
+                <li><a href="https://www.instagram.com/touslesjoursmn/"><figure><img src="web_pic/logo_ig.png" alt="instagram" width="30" height="30"></figure></a></li>
+                <li><a href="https://twitter.com/tljmn?lang=en"><figure><img src="web_pic/logo_tw.png" alt="twitter" width="30" height="30"></figure></a></li>
+            </ul>
+            </address>
+            <article id="feedback">
+                <a href="homee.html">Хүний нөөц</a>
+                <a href="homee.html">Санал хүсэлт</a>
+            </article>
+        </section>
+        <hr>
+        <section class="address">
+            <address id="adds">
+                <ul class="bla">
+                    <li><img src="web_pic/icons_branch.png" alt="branch" width="24" height="24"><p>Монгол Улс, Улаанбаатар хот, ХУД, 18-р хороо, Их Монгол гудамж, Хүннү 2222 хороолол</p></li>
+                    <li><img src="web_pic/icons_mail.png" alt="mail" width="24" height="24"><p>info@tlj.mn</p></li>
+                    <li><img src="web_pic/icons_phone.png" alt="phone_num" width="24" height="24"><p>(976) 7575-7510</p></li>
+                </ul>
+            </address>
+            <p id="text">©2022 - АРТИЗАН ХХК. БҮХ ЭРХ ХУУЛИАР ХАМГААЛАГДСАН</p>
+    </footer>
+</body>
+</html>
